@@ -1,0 +1,28 @@
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid rebeccapurple;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 6px;
+  padding: 1px;
+}
+
+.header {
+  background-color: #f60;
+}
+.content {
+  display: block;
+}
+.anchor {
+  cursor: pointer;
+}
+.comments {
+  display: block;
+}
+.link {
+  cursor: pointer;
+}

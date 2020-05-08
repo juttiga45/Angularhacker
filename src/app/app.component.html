@@ -1,0 +1,43 @@
+<div id="root">
+  <div class="App">
+    <div class="container-fluid">
+      <table class="table table-striped col-xs-12 col-md-12">
+        <thead class="header">
+          <tr>
+            <th class="comments">Comments</th>
+            <th class="UpVote">Vote Count</th>
+            <th>UpVote</th>
+            <th>News Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="comments" *ngFor="let data of newData.hits">-</td>
+            <td class="UpVote">{{ user }}</td>
+            <td class="Vote">
+              <span
+                class="arrow"
+                (click)="add()"
+                *ngFor="let data of newData.hits"
+              ></span>
+            </td>
+            <td class="content" id="data" *ngFor="let data of newData.hits">
+              <strong class="title"
+                ><a>{{ data.title }}</a></strong
+              >&nbsp;
+              <span class="link"
+                >(<a>{{ data.url }}</a
+                >)</span
+              >&nbsp; <small class="by">by</small>&nbsp;
+              <span class="user">{{ data.author }}</span
+              >&nbsp;
+              <span class="anchor"
+                ><a (click)="hide(data.objectID)">[hide]</a></span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
